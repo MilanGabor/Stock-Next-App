@@ -45,17 +45,20 @@ const QuotePage = () => {
           text-black absolute mobile:left-5 tablet:left-10 laptop/desktop:left-20' 
           onClick={() => router.push('/')}>Home</button>
         {loading && <p className='mt-4 text-blue-600'>Loading...</p>}
-        {error && <p className='mt-4 text-red-600'>Error: {error}</p>}
-        {quoteData && (
-          quoteData['Global Quote']
-            ? (
-              <div className='mt-4 text-left bg-white mobile:p-0 tablet:p-4 rounded-md shadow-md w-full max-w-2xl text-black'>
-                <QuoteCard quoteData={quoteData} />
-              </div>
-            ) : (
-              <QuoteCard />
+        {error ? <p className='mt-4 text-red-600'>Error: {error}</p>
+          : (
+            quoteData && (
+              quoteData['Global Quote']
+                ? (
+                  <div className='mt-4 text-left bg-white mobile:p-0 tablet:p-4 rounded-md shadow-md w-full max-w-2xl text-black'>
+                    <QuoteCard quoteData={quoteData} />
+                  </div>
+                ) : (
+                  <QuoteCard />
+                )
             )
-        )}
+
+          )}
       </main>
     </div>
   );
