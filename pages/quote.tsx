@@ -19,7 +19,9 @@ const QuotePage = () => {
         try {
           const result = await fetchStockData(symbol as string);
           setQuoteData(result);
-          console.log(result);
+          if (!result['Global Quote'] && !result['Information']) {
+            setError('No match found')
+          }
         } catch (error: any) {
           setError(error.message);
         } finally {

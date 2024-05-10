@@ -15,7 +15,6 @@ const SearchQuote = () => {
           result.bestMatches 
             ? setSuggestions(result.bestMatches)
             : setSuggestions([result.Information]);
-          console.log(result.Information);
         } catch (error) {
           console.error(error);
         }

@@ -3,8 +3,6 @@ import SearchQuote from '../components/SearchQuote';
 import { useRouter } from 'next/router';
 
 const Home = () => {
-  const router = useRouter();
-
   return (
     <div className='min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4'>
       <Head>
