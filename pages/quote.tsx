@@ -36,11 +36,11 @@ const QuotePage = () => {
       <Head>
         <title>Stock Quote for {symbol}</title>
         <meta name='description' content={`Stock quote details for ${symbol}`} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className='flex flex-col items-center w-full flex-1 px-5  mobile:py-0 tablet:py-5 text-center'>
         <h1 className='font-bold mb-6 text-black mobile:text-xl
-          laptop:text-2xl desktop:text-3xl'>Stock Quote for '{symbol}'</h1>
+          laptop:text-2xl desktop:text-3xl'>Stock Quote for &apos;{symbol}&apos;</h1>
         <button className='mobile:text-xl laptop:text-2xl desktop:text-3xl 
           text-black absolute mobile:left-5 tablet:left-10 laptop/desktop:left-20' 
           onClick={() => router.push('/')}>Home</button>
